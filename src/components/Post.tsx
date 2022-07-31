@@ -27,7 +27,7 @@ export interface PostProps {
 export function Post({ author, publishedAt, content }: PostProps) {
 
     const [comments, setComments] = useState<string[]>([])
-    const [newCommentText, setNewCommentText] = useState("")
+    const [newCommentText, setNewCommentText] = useState<string>("")
 
     const publishedDateFormatted = format(publishedAt, "dd 'de' LLLL 'as' HH:mm'h'", {
         locale: ptBR
