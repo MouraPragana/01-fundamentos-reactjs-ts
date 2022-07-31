@@ -1,0 +1,27 @@
+.wrapper {
+    /* Largura máxima */
+    max-width: 70rem;
+    /* 32px de margin top e bottom e centralizada */
+    margin: 2rem auto;
+    /* Padding nas laterais para não deixar texto grudar nas bordas ao diminuir largura*/
+    padding: 0 1rem;
+
+    /* Será em grid */
+    display: grid;
+    /* Grid composto por duas colunas. Primeira 256px e a segunda full-fill */
+    grid-template-columns: 256px 1fr;
+    /* Espaçamento entre as colunas */
+    gap: 2rem;
+    /* Os blocos das colunas vão se alinhar na parte superior*/
+    align-items: flex-start;
+}
+
+@media (max-width: 758px) {
+    html {
+        font-size: 75%;
+    }
+
+    .wrapper {
+        grid-template-columns: 1fr;
+    }
+}
